@@ -51,7 +51,7 @@ export default function LoginPage() {
         <div className="w-1/2 p-8">
           <h1 className="text-3xl mb-6 text-center">Login</h1>
           <div className="mb-4 flex justify-around">
-            {['Nurse', 'Doctor', 'Admin'].map(role => (
+            {['Receptionist', 'Doctor', 'Patient'].map(role => (
               <label key={role} className="cursor-pointer">
                 <input
                   type="radio"
@@ -66,9 +66,6 @@ export default function LoginPage() {
                 </span>
               </label>
             ))}
-          </div>
-          <div className="mb-4 flex justify-center">
-            {/* <img src="path/to/admin.jpg" alt="profile" className="w-24 h-24 rounded-full" /> */}
           </div>
           <div>
             <form onSubmit={handleSubmit}>
@@ -112,7 +109,7 @@ export default function LoginPage() {
 
       {drawerOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg relative">
+          <div className="bg-blue-200 p-8 rounded-lg shadow-lg relative">
             <button
               className="absolute top-2 right-2 text-xl"
               onClick={closeDrawer}
@@ -148,7 +145,7 @@ export default function LoginPage() {
               />
             </div>
             <button
-              className="w-full py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              className="w-full py-2 bg-blue-500 text-white rounded hover:bg-red-600"
               onClick={handleChangePassword}
             >
               {forgetLoading ? 'Loading...' : 'Send Mail'}
